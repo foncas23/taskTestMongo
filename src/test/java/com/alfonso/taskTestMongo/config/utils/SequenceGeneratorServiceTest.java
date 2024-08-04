@@ -34,7 +34,6 @@ class SequenceGeneratorServiceTest {
                 .build();
 
         when(counterRepository.findById(seqName)).thenReturn(Optional.of(existingCounter));
-
         long newSequence = sequenceGeneratorService.generateSequence(seqName);
 
         assertEquals(6, newSequence);
